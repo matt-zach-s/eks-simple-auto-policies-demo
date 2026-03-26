@@ -4,7 +4,7 @@ type              = "terraform_module"
 terraform_version = "1.11.3"
 
 [public_repo]
-repo      = "matt-zach-s/eks-simple-auto-policies-demo"
+repo      = "matt-zach-s/policies-demo"
 directory = "src/components/database"
 branch    = "main"
 

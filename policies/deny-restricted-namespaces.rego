@@ -1,3 +1,5 @@
+# the whoami-kube-system component deploys a manifest to the kube-system namespace, which intentionally triggers the following policy: 
+
 package nuon
 
 restricted_namespaces := {"default", "kube-system", "kube-public"}

@@ -1,3 +1,5 @@
+# the whoami component uses traefik/whoami:latest from Docker Hub instead of the install's ECR repository, which intentionally triggers the following policy:
+
 package nuon
 
 deny contains msg if {

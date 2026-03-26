@@ -1,3 +1,5 @@
+# the s3-bucket component creates an aws_s3_bucket resource, which intentionally triggers the following policy:
+
 package nuon
 
 deny contains msg if {

@@ -1,43 +1,35 @@
 # policies
 
 [[policy]]
-type     = "kubernetes_cluster"
-contents = "./policies/disallow-ingress-nginx-custom-snippets.yaml"
-
-[[policy]]
-type     = "kubernetes_cluster"
-contents = "./policies/set-karpenter-non-cpu-limits.yaml"
-
-[[policy]]
 type     = "sandbox"
 engine   = "opa"
-contents = "./policies/1-warn-public-eks-endpoint.rego"
+contents = "./policies/warn-public-eks-endpoint.rego"
 
 [[policy]]
 type       = "terraform_module"
 engine     = "opa"
 components = ["s3_bucket"]
-contents   = "./policies/2-deny-s3-bucket-creation.rego"
+contents   = "./policies/deny-s3-bucket-creation.rego"
 
 [[policy]]
 type       = "terraform_module"
 engine     = "opa"
 components = ["demo_database"]
-contents   = "./policies/3-deny-database-modification.rego"
+contents   = "./policies/deny-database-modification.rego"
 
 [[policy]]
 type       = "helm_chart"
 engine     = "opa"
 components = ["*"]
-contents   = "./policies/4-deny-restricted-namespaces.rego"
+contents   = "./policies/deny-restricted-namespaces.rego"
 
 [[policy]]
 type     = "sandbox"
 engine   = "opa"
-contents = "./policies/5a-deny-extra-access-entries.rego"
+contents = "./policies/deny-extra-access-entries.rego"
 
 [[policy]]
 type       = "helm_chart"
 engine     = "opa"
 components = ["*"]
-contents   = "./policies/5b-deny-non-ecr-images.rego"
+contents   = "./policies/deny-non-ecr-images.rego"

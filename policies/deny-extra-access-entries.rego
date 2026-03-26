@@ -1,3 +1,5 @@
+# the sandbox (https://github.com/nuonco/aws-eks-auto-sandbox) creates EKS access entries for the runner roles (provision, maintenance, deprovision); adding any non-runner IAM principal would intentionally trigger the following policy:
+
 package nuon
 
 runner_role_patterns := ["provision", "maintenance", "deprovision"]

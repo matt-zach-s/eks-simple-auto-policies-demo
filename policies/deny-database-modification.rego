@@ -1,3 +1,5 @@
+# the database component creates a DynamoDB table; on first deploy the "create" action is allowed, but changing the billing_mode input and redeploying produces an "update" action which intentionally triggers the following policy:
+
 package nuon
 
 deny contains msg if {

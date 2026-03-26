@@ -1,3 +1,5 @@
+# the sandbox.tfvars file has cluster_endpoint_public_access = true which intentionally triggers the following policy:
+
 package nuon
 
 warn contains msg if {
